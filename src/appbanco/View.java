@@ -86,6 +86,14 @@ public class View extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton_1 = new JButton("Login");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				ViewLogin viewlogin = new ViewLogin();
+				viewlogin.show();
+				dispose();
+			}
+		});
 		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.setBounds(246, 209, 89, 23);
 		contentPane.add(btnNewButton_1);
