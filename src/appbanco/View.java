@@ -78,13 +78,6 @@ public class View extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.WHITE);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\png.png"));
-		lblNewLabel.setBounds(0, 0, 434, 198);
-		contentPane.add(lblNewLabel);
-		
 		JButton btnNewButton_1 = new JButton("Login");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
@@ -94,13 +87,29 @@ public class View extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_1.setBackground(Color.WHITE);
-		btnNewButton_1.setBounds(246, 209, 89, 23);
-		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton = new JButton("Cadastro");
-		btnNewButton.setBounds(94, 209, 89, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				ViewCadastro viewCadastro = new ViewCadastro();
+				viewCadastro.show();
+				dispose();
+						
+			}
+		});
+		btnNewButton.setBounds(103, 168, 89, 23);
 		contentPane.add(btnNewButton);
+		btnNewButton_1.setBackground(Color.WHITE);
+		btnNewButton_1.setBounds(255, 168, 89, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBackground(Color.WHITE);
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\png.png"));
+		lblNewLabel.setBounds(0, 0, 434, 239);
+		contentPane.add(lblNewLabel);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {

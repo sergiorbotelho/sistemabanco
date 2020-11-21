@@ -78,7 +78,7 @@ public class ViewLogin extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\png.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\pngteste.png"));
 		lblNewLabel.setBounds(0, 22, 434, 239);
 		contentPane.add(lblNewLabel);
 		
