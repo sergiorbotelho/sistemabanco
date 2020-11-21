@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JMenuBar;
 import javax.swing.SwingConstants;
 import java.awt.Component;
@@ -19,10 +20,15 @@ import javax.swing.KeyStroke;
 import java.awt.event.KeyEvent;
 import java.awt.event.InputEvent;
 import java.awt.Color;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
+import java.awt.event.ActionListener;
 
 public class View extends JFrame {
 
 	private JPanel contentPane;
+	private final Action action = new SwingAction();
 
 	/**
 	 * Launch the application.
@@ -56,6 +62,17 @@ public class View extends JFrame {
 		JMenu mnNewMenu_1 = new JMenu("Ajuda");
 		mnNewMenu_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		menuBar.add(mnNewMenu_1);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Manual");
+		mnNewMenu_1.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Sobre");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Eu disse pra cliclar abaixo seu animal");
+			}
+		});
+		mnNewMenu_1.add(mntmNewMenuItem_1);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -76,5 +93,13 @@ public class View extends JFrame {
 		JButton btnNewButton = new JButton("Cadastro");
 		btnNewButton.setBounds(94, 209, 89, 23);
 		contentPane.add(btnNewButton);
+	}
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
 	}
 }
