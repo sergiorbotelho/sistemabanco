@@ -45,7 +45,7 @@ public class ViewLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public ViewLogin() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\nave 01.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\S\u00E9rgio Botelho Filho\\Pictures\\favicon_io123\\apple-touch-icon.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
