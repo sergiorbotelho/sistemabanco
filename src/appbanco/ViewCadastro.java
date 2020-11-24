@@ -15,6 +15,10 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JMenu;
+import javax.swing.SwingConstants;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 public class ViewCadastro extends JFrame {
 
@@ -51,6 +55,16 @@ public class ViewCadastro extends JFrame {
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu_1 = new JMenu("Ajuda");
+		mnNewMenu_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		menuBar.add(mnNewMenu_1);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Manual");
+		mnNewMenu_1.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Sobre");
+		mnNewMenu_1.add(mntmNewMenuItem_1);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,7 +96,12 @@ public class ViewCadastro extends JFrame {
 		contentPane.add(textField_2);
 
 		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.setBounds(49, 205, 89, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso");
+			}
+		});
+		btnNewButton.setBounds(49, 205, 104, 23);
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
