@@ -62,13 +62,6 @@ public class ViewLogin extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_1.setBounds(241, 231, 89, 23);
-		contentPane.add(btnNewButton_1);
-		
-		JButton btnNewButton = new JButton("ENTRAR");
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setBounds(121, 231, 89, 23);
-		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("Digite o n\u00FAmero da conta:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -77,8 +70,20 @@ public class ViewLogin extends JFrame {
 		lblNewLabel_1.setBounds(133, 160, 180, 22);
 		contentPane.add(lblNewLabel_1);
 		
+		JButton btnNewButton = new JButton("ENTRAR");
+		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.setBounds(121, 231, 89, 23);
+		contentPane.add(btnNewButton);
+		btnNewButton_1.setBounds(241, 231, 89, 23);
+		contentPane.add(btnNewButton_1);
+		
+		textField = new JTextField();
+		textField.setBounds(121, 190, 209, 30);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\pngteste.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\S\u00E9rgio Botelho Filho\\eclipse-workspace\\SistemaBanco\\img\\Pela.png"));
 		lblNewLabel.setBounds(0, 22, 434, 239);
 		contentPane.add(lblNewLabel);
 		
@@ -94,10 +99,5 @@ public class ViewLogin extends JFrame {
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Sobre");
 		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		textField = new JTextField();
-		textField.setBounds(121, 190, 209, 30);
-		contentPane.add(textField);
-		textField.setColumns(10);
 	}
 }
