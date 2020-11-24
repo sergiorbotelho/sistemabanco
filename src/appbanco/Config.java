@@ -37,9 +37,14 @@ public class Config implements Interface {
 	}
 
 	@Override
-	public void cadastro(String nome, int num, double cont) {
+	public void cadastro(String nome, int num, double saldo) {
 		
+		Conta a = new Conta();
 		LinkedList<Conta> conta = new LinkedList<Conta>(); 
+		a.nome = nome;
+		a.num = num;
+		a.saldo = saldo;
+		conta.add(a);
 		
 	}
 	
