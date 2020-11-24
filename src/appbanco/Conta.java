@@ -2,11 +2,13 @@ package appbanco;
 
 public class Conta {
 
+	protected String nome;
 	protected int num;
 	protected double saldo;
 
-	public Conta(int num, double saldo) {
+	public Conta(String nome, int num, double saldo) {
 		super();
+		this.nome = nome;
 		this.num = num;
 		this.saldo = saldo;
 	}
@@ -14,6 +16,14 @@ public class Conta {
 	public Conta() {
 	}
 
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 	public int getNum() {
 		return num;
 	}
@@ -41,15 +51,5 @@ public class Conta {
 		saldo = saldo + val;
 	}
 
-	public void exibeConta() {
-		System.out.println("-------------------------");
-		System.out.println("Número: " + num);
-		System.out.println("Saldo : " + saldo);
-		System.out.println("=========================");
-	}
-
-	public String toString() {
-		return "-------------------------\n" + "Número: " + num + "\n" + "Saldo : " + saldo + "\n"
-				+ "=========================";
-	}
+	
 }
