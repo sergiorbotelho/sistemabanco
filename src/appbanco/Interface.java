@@ -7,6 +7,6 @@ public interface Interface {
 	public abstract void depositar();
 	public abstract void saldo();
 	public abstract void transferir();
-	public abstract void relatorio();
+	public abstract String relatorio(String nome, int num, double saldo);
 	
 }
