@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class Config implements Interface {
 
+	LinkedList<Conta> conta = new LinkedList<Conta>(); 
 	@Override
 	public void depositar() {
 		// TODO Auto-generated method stub
@@ -23,12 +24,7 @@ public class Config implements Interface {
 		
 	}
 
-	@Override
-	public void relatorio() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 
 	@Override
 	public void login() {
@@ -38,14 +34,24 @@ public class Config implements Interface {
 
 	@Override
 	public void cadastro(String nome, int num, double saldo) {
-		
 		Conta a = new Conta();
-		LinkedList<Conta> conta = new LinkedList<Conta>(); 
 		a.nome = nome;
 		a.num = num;
 		a.saldo = saldo;
 		conta.add(a);
 		
 	}
+
+	@Override
+	public String relatorio(String nome, int num, double saldo) {
+		Conta a = new Conta();
+		for(Conta list : conta) {
+			System.out.println(list.nome);
+		}
+		
+		return null;
+	}
+
+	
 	
 }
